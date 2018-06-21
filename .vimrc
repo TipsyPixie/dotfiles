@@ -1,9 +1,9 @@
-"syntax
+
 if has("syntax")
-	syntax on
+    syntax on
 endif
 
-set number              
+set number            
 set laststatus=2        
 set hlsearch
 set smartcase
@@ -18,6 +18,7 @@ set showmatch
 set autoread
 set enc=UTF-8
 set ruler
+set mouse=a
 
 nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
