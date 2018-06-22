@@ -1,5 +1,5 @@
 
-if has("syntax")
+if has('syntax')
     syntax on
 endif
 
