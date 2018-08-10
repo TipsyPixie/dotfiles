@@ -11,11 +11,11 @@ set ruler
 " Search
 set hlsearch
 set incsearch
-set ignorecase
-set smartcase
+set noignorecase
+set nosmartcase
 
 " Indentation
-set smartindent
+set cindent
 set smarttab
 set expandtab
 set shiftwidth=4
