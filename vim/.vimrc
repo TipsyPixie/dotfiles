@@ -10,7 +10,7 @@ set ruler
 
 " Search
 set hlsearch
-set clsearch
+set incsearch
 set ignorecase
 set smartcase
 
