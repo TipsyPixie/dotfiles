@@ -32,7 +32,7 @@ module.exports = {
   // to customize your Truffle configuration!
   networks: {
     development: {
-      // Make sure you have 'provider' property as a FUNCTION
+      // Make sure 'provider' property is a FUNCTION
       provider: () => new HDWalletProvider(mnemonic, infuraEndpoint(truffleEnv)),
       network_id: networkIds[truffleEnv],
       gasPrice: 50000000000
