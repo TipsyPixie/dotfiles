@@ -26,7 +26,7 @@ set softtabstop=4
 set showmatch
 set autoread
 set enc=UTF-8
-set mouse=a
+set mouse=i
 
 " Shortcuts
 nmap <C-o> O<Esc>
