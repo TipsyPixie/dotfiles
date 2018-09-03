@@ -4,6 +4,13 @@ alias psgrep='ps -ef | grep'
 alias nsgrep='netstat -anop | grep'
 alias lsgrep='ls | grep'
 
+docker-shell() {
+    [[ -z "$2" ]] && SHELL="bash"
+    [[ -z "$2" ]] || SHELL="$2"
+    
+    docker exec -it $1 /bin/$SHELL
+}
+
 endian-swap() {
     i=${#1}
 
@@ -15,4 +22,3 @@ endian-swap() {
         [[ $i -ge 0 ]] || echo -n ${1:0:1}
     done
 }
-
