@@ -1,3 +1,6 @@
+" Color
+colorscheme monokai
+
 "syntax highlight
 if has('syntax')
     syntax on
@@ -33,6 +36,3 @@ nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 nmap <C-l> :tabn<CR>
 nmap <C-h> :tabp<CR>
-
-" Color
-colorscheme monokai
