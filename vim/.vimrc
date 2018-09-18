@@ -14,7 +14,6 @@ set ruler
 " Search
 set hlsearch
 set incsearch
-set showmatch
 set noignorecase
 set nosmartcase
 
@@ -27,6 +26,7 @@ set tabstop=4
 set softtabstop=4
 
 " etc.
+set showmatch
 set autoread
 set enc=UTF-8
 set mouse=i
