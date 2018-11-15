@@ -1,3 +1,5 @@
+" Requires apt-vim and NerdTree
+
 " Color
 colorscheme monokai
 
