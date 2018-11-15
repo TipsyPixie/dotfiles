@@ -36,3 +36,8 @@ nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 nmap <C-l> :tabn<CR>
 nmap <C-h> :tabp<CR>
+nmap <C-n> :NERDTreeToggle<CR>
+
+" Init Pathogen
+execute pathogen#infect()
+call pathogen#helptags()
