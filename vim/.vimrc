@@ -38,6 +38,6 @@ nmap <C-l> :tabn<CR>
 nmap <C-h> :tabp<CR>
 
 " Requires apt-vim and NerdTree
-#nmap <C-n> :NERDTreeToggle<CR>
-#execute pathogen#infect()
-#call pathogen#helptags()
+" nmap <C-n> :NERDTreeToggle<CR>
+" execute pathogen#infect()
+" call pathogen#helptags()
