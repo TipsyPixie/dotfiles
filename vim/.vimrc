@@ -1,7 +1,7 @@
 " Color
 colorscheme monokai
 
-"syntax highlight
+" Syntax Highlight
 if has('syntax')
     syntax on
 endif
