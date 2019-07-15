@@ -8,5 +8,5 @@ charset = utf-8
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-[{*.yml, *.html, *.xml}]
+[{*.yml, *.html, *.xml, *.jinja2}]
 indent_size = 2
