@@ -10,3 +10,9 @@ trim_trailing_whitespace = true
 
 [{*.yml, *.html, *.xml, *.jinja2}]
 indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+[*.bat]
+indent_style = tab
