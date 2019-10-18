@@ -5,3 +5,7 @@ for binary_path in ${BINARY_PATHS[@]}
 do
     export PATH="$PATH:$binary_path"
 done
+
+alias clearhistory='history -c && history -w'
+alias agent='eval $(ssh-agent)'
+alias noagent='ssh-agent -k'
