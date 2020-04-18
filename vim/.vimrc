@@ -14,8 +14,8 @@ set ruler
 " Search
 set hlsearch
 set incsearch
-set noignorecase
-set nosmartcase
+set ignorecase
+set smartcase
 
 " Indentation
 set cindent
@@ -26,6 +26,7 @@ set tabstop=4
 set softtabstop=4
 
 " etc.
+set showcmd
 set showmatch
 set autoread
 set enc=UTF-8
