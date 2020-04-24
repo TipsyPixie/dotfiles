@@ -66,13 +66,13 @@ def configure(repl):
     repl.enable_dictionary_completion = False
 
     # Vi mode.
-    repl.vi_mode = False
+    repl.vi_mode = True 
 
     # Paste mode. (When True, don't insert whitespace after new line.)
     repl.paste_mode = False
 
     # Use the classic prompt. (Display '>>>' instead of 'In [1]'.)
-    repl.prompt_style = "classic"  # 'classic' or 'ipython'
+    repl.prompt_style = 'classic'  # 'classic' or 'ipython'
 
     # Don't insert a blank line after the output.
     repl.insert_blank_line_after_output = False
@@ -105,13 +105,13 @@ def configure(repl):
     repl.enable_input_validation = True
 
     # Use this colorscheme for the code.
-    repl.use_code_colorscheme("monokai")
+    repl.use_code_colorscheme('monokai')
 
     # Set color depth (keep in mind that not all terminals support true color).
 
     # repl.color_depth = 'DEPTH_1_BIT'  # Monochrome.
     # repl.color_depth = 'DEPTH_4_BIT'  # ANSI colors only.
-    # repl.color_depth = "DEPTH_8_BIT"  # The default, 256 colors.
+    # repl.color_depth = 'DEPTH_8_BIT'  # The default, 256 colors.
     repl.color_depth = 'DEPTH_24_BIT'  # True color.
 
     # Syntax.
@@ -168,9 +168,7 @@ def configure(repl):
 
     # Add a custom title to the status bar. This is useful when ptpython is
     # embedded in other applications.
-    """
-    repl.title = "My custom prompt."
-    """
+    repl.title = "Pee Tea Python"
 
 
 # Custom colorscheme for the UI. See `ptpython/layout.py` and
