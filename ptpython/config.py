@@ -1,10 +1,9 @@
 """
 Configuration example for ``ptpython``.
-Copy this file to ~/.ptpython/config.py on windows use 
-`os.path.expanduser("~/.ptpython/config.py")` to find the 
-correct location.
+Copy this file to $XDG_CONFIG_HOME/ptpython/config.py
 """
 from __future__ import unicode_literals
+
 from prompt_toolkit.filters import ViInsertMode
 from prompt_toolkit.key_binding.key_processor import KeyPress
 from prompt_toolkit.keys import Keys
@@ -12,9 +11,7 @@ from pygments.token import Token
 
 from ptpython.layout import CompletionVisualisation
 
-__all__ = (
-    'configure',
-)
+__all__ = ("configure",)
 
 
 def configure(repl):
@@ -40,13 +37,16 @@ def configure(repl):
     repl.completion_menu_scroll_offset = 0
 
     # Show line numbers (when the input contains multiple lines.)
-    repl.show_line_numbers = False
+    repl.show_line_numbers = True 
 
     # Show status bar.
     repl.show_status_bar = True
 
     # When the sidebar is visible, also show the help text.
     repl.show_sidebar_help = True
+
+    # Swap light/dark colors on or off
+    repl.swap_light_and_dark = True 
 
     # Highlight matching parethesis.
     repl.highlight_matching_parenthesis = True
@@ -66,13 +66,13 @@ def configure(repl):
     repl.enable_dictionary_completion = False
 
     # Vi mode.
-    repl.vi_mode = True 
+    repl.vi_mode = False
 
     # Paste mode. (When True, don't insert whitespace after new line.)
     repl.paste_mode = False
 
     # Use the classic prompt. (Display '>>>' instead of 'In [1]'.)
-    repl.prompt_style = 'classic'  # 'classic' or 'ipython'
+    repl.prompt_style = "classic"  # 'classic' or 'ipython'
 
     # Don't insert a blank line after the output.
     repl.insert_blank_line_after_output = False
@@ -89,7 +89,7 @@ def configure(repl):
     # based on the history.)
     repl.enable_auto_suggest = False
 
-    # Enable open-in-editor. Pressing C-X C-E in emacs mode or 'v' in
+    # Enable open-in-editor. Pressing C-x C-e in emacs mode or 'v' in
     # Vi navigation mode will open the input in the current editor.
     repl.enable_open_in_editor = True
 
@@ -105,13 +105,13 @@ def configure(repl):
     repl.enable_input_validation = True
 
     # Use this colorscheme for the code.
-    repl.use_code_colorscheme('monokai')
+    repl.use_code_colorscheme("monokai")
 
     # Set color depth (keep in mind that not all terminals support true color).
 
-    #repl.color_depth = 'DEPTH_1_BIT'  # Monochrome.
-    #repl.color_depth = 'DEPTH_4_BIT'  # ANSI colors only.
-    #repl.color_depth = 'DEPTH_8_BIT'  # The default, 256 colors.
+    # repl.color_depth = 'DEPTH_1_BIT'  # Monochrome.
+    # repl.color_depth = 'DEPTH_4_BIT'  # ANSI colors only.
+    # repl.color_depth = "DEPTH_8_BIT"  # The default, 256 colors.
     repl.color_depth = 'DEPTH_24_BIT'  # True color.
 
     # Syntax.
@@ -138,7 +138,6 @@ def configure(repl):
     def _(event):
         event.current_buffer.validate_and_handle()
     """
-
 
     # Typing 'jj' in Vi Insert mode, should send escape. (Go back to navigation
     # mode.)
@@ -167,13 +166,18 @@ def configure(repl):
         b.insert_text(' ')
     """
 
+    # Add a custom title to the status bar. This is useful when ptpython is
+    # embedded in other applications.
+    """
+    repl.title = "My custom prompt."
+    """
+
 
 # Custom colorscheme for the UI. See `ptpython/layout.py` and
 # `ptpython/style.py` for all possible tokens.
-#_custom_ui_colorscheme = {
-#    # Blue prompt.
-#    Token.Layout.Prompt:                          'bg:#eeeeff #000000 bold',
-#
-#    # Make the status toolbar red.
-#    Token.Toolbar.Status:                         'bg:#ff0000 #000000',
-#}
+_custom_ui_colorscheme = {
+    # Blue prompt.
+    Token.Layout.Prompt: "bg:#eeeeff #000000 bold",
+    # Make the status toolbar red.
+    Token.Toolbar.Status: "bg:#ff0000 #000000",
+}
