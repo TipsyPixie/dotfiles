@@ -10,6 +10,9 @@ endif
 set number
 set laststatus=2
 set ruler
+set cursorline
+set background=dark
+set title
 
 " Search
 set hlsearch
@@ -31,12 +34,17 @@ set showmatch
 set autoread
 set enc=UTF-8
 set mouse=i
+set noerrorbells
 
 " Shortcuts
 nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 nmap <C-l> :tabn<CR>
 nmap <C-h> :tabp<CR>
+
+" Optimization
+set lazyredraw
+set complete-=i
 
 " Requires apt-vim and NerdTree
 " nmap <C-n> :NERDTreeToggle<CR>
