@@ -42,6 +42,14 @@ nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 nmap <C-l> :tabn<CR>
 nmap <C-h> :tabp<CR>
+nmap <C-Right> <C-w>l
+nmap <C-Left> <C-w>h
+nmap <C-Up> <C-w>j
+nmap <C-Down> <C-w>k
+nmap <A-Right> <C-w><S-l>
+nmap <A-Left> <C-w><S-h>
+nmap <A-Up> <C-w><S-j>
+nmap <A-Down> <C-w><S-k>
 
 " Optimization
 set lazyredraw
