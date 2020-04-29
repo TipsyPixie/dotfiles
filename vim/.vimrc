@@ -50,6 +50,14 @@ nmap <A-Right> <C-w><S-l>
 nmap <A-Left> <C-w><S-h>
 nmap <A-Down> <C-w><S-j>
 nmap <A-Up> <C-w><S-k>
+imap <C-Right> <Esc><C-Right>i
+imap <C-Left> <Esc><C-Left>i
+imap <C-Down> <Esc><C-Down>i
+imap <C-Up> <Esc><C-Up>i
+imap <A-Right> <Esc><A-Right>i
+imap <A-Left> <Esc><A-Left>i
+imap <A-Down> <Esc><A-Down>i
+imap <A-Up> <Esc><A-Up>i
 
 " Optimization
 set lazyredraw
