@@ -35,7 +35,7 @@ set showmatch
 set autoread
 set enc=UTF-8
 set mouse=i
-set noerrorbells
+set belloff=all
 
 " Shortcuts
 nmap <C-o> O<Esc>
