@@ -42,14 +42,6 @@ nmap <C-o> O<Esc>
 nmap <CR> o<Esc>
 nmap <C-l> :tabn<CR>
 nmap <C-h> :tabp<CR>
-nmap <C-Right> <C-w>l
-nmap <C-Left> <C-w>h
-nmap <C-Down> <C-w>j
-nmap <C-Up> <C-w>k
-nmap <A-Right> <C-w><S-l>
-nmap <A-Left> <C-w><S-h>
-nmap <A-Down> <C-w><S-j>
-nmap <A-Up> <C-w><S-k>
 imap <C-Right> <Esc><C-Right>i
 imap <C-Left> <Esc><C-Left>i
 imap <C-Down> <Esc><C-Down>i
