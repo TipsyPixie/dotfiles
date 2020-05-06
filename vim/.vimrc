@@ -46,8 +46,3 @@ nmap <C-h> :tabp<CR>
 " Optimization
 set lazyredraw
 set complete-=i
-
-" Requires apt-vim and NerdTree
-" nmap <C-n> :NERDTreeToggle<CR>
-" execute pathogen#infect()
-" call pathogen#helptags()
