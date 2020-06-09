@@ -1,17 +1,19 @@
 #https://www.freebsd.org/cgi/man.cgi?sshd_config(5)
 
-#Port 22
-#ListenAddress 0.0.0.0
-#PermitRootLogin no
-#AuthenticationMethods publickey
-#PasswordAuthentication no
-#UsePAM no
-#ChallengeResponseAuthentication no
-#PubkeyAuthentication yes
-#HostbasedAuthentication no
-#PermitEmptyPasswords no
-#ClientAliveInterval 300
-#ClientAliveCountMax 0
-#IgnoreRhosts yes
-#AllowUsers user
-#ChrootDirectory /home/user
+Port 22
+ListenAddress 0.0.0.0
+PermitRootLogin no
+AuthenticationMethods publickey
+PasswordAuthentication no
+UsePAM no
+ChallengeResponseAuthentication no
+PubkeyAuthentication yes
+HostbasedAuthentication no
+PermitEmptyPasswords no
+ClientAliveInterval 300
+ClientAliveCountMax 0
+IgnoreRhosts yes
+AllowUsers user
+ChrootDirectory /home/user
+PermitOpen none
+AllowAgentForwarding no
