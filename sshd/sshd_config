@@ -1,0 +1,15 @@
+#Port 22
+#ListenAddress 0.0.0.0
+#PermitRootLogin no
+#AuthenticationMethods publickey
+#PasswordAuthentication no
+#UsePAM no
+#ChallengeResponseAuthentication no
+#PubkeyAuthentication yes
+#HostbasedAuthentication no
+#PermitEmptyPasswords no
+#ClientAliveInterval 300
+#ClientAliveCountMax 0
+#IgnoreRhosts yes
+#AllowUsers user
+#ChrootDirectory /home/user
