@@ -1,3 +1,5 @@
+#https://www.freebsd.org/cgi/man.cgi?sshd_config(5)
+
 #Port 22
 #ListenAddress 0.0.0.0
 #PermitRootLogin no
