@@ -1,6 +1,7 @@
 """
 Configuration example for ``ptpython``.
 Copy this file to $XDG_CONFIG_HOME/ptpython/config.py
+https://github.com/prompt-toolkit/ptpython/blob/master/examples/ptpython_config/config.py
 """
 from __future__ import unicode_literals
 
