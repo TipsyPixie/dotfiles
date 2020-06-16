@@ -22,7 +22,7 @@ set ignorecase
 set smartcase
 
 " Indentation
-set cindent
+set smartindent
 set smarttab
 set expandtab
 set shiftwidth=4
