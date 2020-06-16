@@ -11,6 +11,7 @@ set number
 set laststatus=2
 set ruler
 set cursorline
+set cursorcolumn
 set background=dark
 set title
 
