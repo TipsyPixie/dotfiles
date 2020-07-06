@@ -99,7 +99,7 @@ def configure(repl):
     repl.enable_system_bindings = True
 
     # Ask for confirmation on exit.
-    repl.confirm_exit = False
+    repl.confirm_exit = True
 
     # Enable input validation. (Don't try to execute when the input contains
     # syntax errors.)
