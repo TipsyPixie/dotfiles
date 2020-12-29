@@ -6,11 +6,5 @@ do
     export PATH="$PATH:$binary_path"
 done
 
-alias clearhistory='history -c && history -w'
+alias clearhistory="history -c && history -w && printf '\033c'"
 alias cdo='cd $OLDPWD'
-
-agent () {
-    [[ ! -z "$SSH_AGENT_PID" ]] && [[ -S "$SSH_AUTH_SOCK" ]] && echo "Agent pid $SSH_AGENT_PID"
-    [[ ! -z "$SSH_AGENT_PID" ]] && [[ -S "$SSH_AUTH_SOCK" ]] || eval $(ssh-agent -t 30m)
-}
-alias noagent='eval $(ssh-agent -k)'
