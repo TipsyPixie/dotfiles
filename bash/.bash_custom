@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 extend-path() {
-    export PATH="$1:$PATH"
+    export PATH="$PATH:$1"
 }
 
 BINARY_PATHS=()
