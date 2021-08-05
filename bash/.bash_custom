@@ -1,10 +1,17 @@
 #! /usr/bin/env bash
 
-BINARY_PATHS=('')
-for binary_path in ${BINARY_PATHS[@]}
+extend-path() {
+    export PATH="$1:$PATH"
+}
+
+BINARY_PATHS=()
+for BINARY_PATH in "${BINARY_PATHS[@]}"
 do
-    export PATH="$PATH:$binary_path"
+    extend-path "$BINARY_PATH"
 done
 
-alias clearhistory="history -c && history -w && printf '\033c'"
 alias cdo='cd $OLDPWD'
+alias sysupdate='sudo apt update -y && sudo apt upgrade -y && sudo apt dist-upgrade -y && sudo apt autoremove -y'
+
+# Less
+export LESS='IFRSXN'
