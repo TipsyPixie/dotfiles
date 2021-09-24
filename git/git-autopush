@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+. "$(dirname "$0")/check-git"
+git push --set-upstream origin "$(git branch --show-current)" "$@"

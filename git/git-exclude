@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+. "$(dirname "$0")/check-git"
+EXCLUDE_FILE_PATH='./.git/info/exclude'
+editor "$EXCLUDE_FILE_PATH"

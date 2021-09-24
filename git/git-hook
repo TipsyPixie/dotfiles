@@ -1,0 +1,11 @@
+#! /usr/bin/env bash
+
+. "$(dirname "$0")/check-git"
+HOOKS_DIR='./.git/hooks'
+FILENAME="$*"
+if [[ -z "$FILENAME" ]]
+then
+    ls -1 "$HOOKS_DIR"
+else
+    editor "$HOOKS_DIR/$FILENAME"    
+fi 
