@@ -1,7 +1,8 @@
 #! /usr/bin/env bash
 
 . "$(dirname "$0")/check-git"
-HOOKS_DIR='./.git/hooks'
+
+HOOKS_DIR="$ROOT_DIR/.git/hooks"
 FILENAME="$*"
 if [[ -z "$FILENAME" ]]
 then
