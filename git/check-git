@@ -2,9 +2,10 @@
 
 NOT_GIT_REPO='fatal: not a git repository (or any of the parent directories): .git'
 
-git status >/dev/null 2>&1
-if [[ "$?" -ne 0 ]]
+if ! git rev-parse --show-toplevel > /dev/null 2>&1
 then
-    echo "$NOT_GIT_REPO"
-    exit "$?" 
+   echo "$NOT_GIT_REPO"
+   exit 1
 fi
+
+ROOT_DIR=$(git rev-parse --show-toplevel)
