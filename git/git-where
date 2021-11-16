@@ -1,11 +1,10 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
 
 COMMAND="$*"
 FILENAME="git-$COMMAND"
-if [[ -z "$COMMAND" ]] || [[ ! -f "$(command -v "$FILENAME")" ]]
-then
-    echo "fatal: invalid git command ($COMMAND)"
-    exit 1
-fi 
+if [ -z "$COMMAND" ] || [ ! -f "$(command -v "$FILENAME")" ]; then
+	echo "fatal: invalid git command $COMMAND"
+	exit 1
+fi
 
 command -v "$FILENAME"

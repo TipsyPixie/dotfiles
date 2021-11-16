@@ -1,12 +1,14 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
+# shellcheck disable=SC1090
 
 . "$(dirname "$0")/check-git"
 
-HOOKS_DIR="$ROOT_DIR/.git/hooks"
+HOOKS_DIR="$(get_root_dir)/.git/hooks"
 FILENAME="$*"
-if [[ -z "$FILENAME" ]]
-then
-    ls -1 "$HOOKS_DIR"
+if [ -z "$FILENAME" ]; then
+	ls -1 "$HOOKS_DIR"
+elif [ ! -e "$HOOKS_DIR/$FILENAME" ] && [ -f "$HOOKS_DIR/$FILENAME.sample" ]; then
+	cp "$HOOKS_DIR/$FILENAME.sample" "$HOOKS_DIR/$FILENAME" && editor "$HOOKS_DIR/$FILENAME"
 else
-    editor "$HOOKS_DIR/$FILENAME"    
-fi 
+	editor "$HOOKS_DIR/$FILENAME"
+fi

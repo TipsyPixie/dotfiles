@@ -1,19 +1,17 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
 # shellcheck disable=SC1090
 
 . "$(dirname "$0")/check-git"
 
-if ! (git rev-parse --short HEAD > /dev/null && git branch --show-current > /dev/null)
-then
-    exit "$?"
+if ! (git rev-parse --short HEAD >/dev/null && git branch --show-current >/dev/null); then
+	exit "$?"
 else
-    HEAD_COMMIT_ID=$(git rev-parse --short HEAD)
-    CURRENT_BRANCH=$(git branch --show-current)
-fi
-if [[ -z "$CURRENT_BRANCH" ]]
-then
-    printf '%s\n' "$HEAD_COMMIT_ID"
-else
-    printf '%s %s\n' "$HEAD_COMMIT_ID" "$CURRENT_BRANCH"
+	HEAD_COMMIT_ID=$(git rev-parse --short HEAD)
+	CURRENT_BRANCH=$(git branch --show-current)
 fi
 
+if [ -z "$CURRENT_BRANCH" ]; then
+	echo "$HEAD_COMMIT_ID"
+else
+	echo "$HEAD_COMMIT_ID   $CURRENT_BRANCH"
+fi

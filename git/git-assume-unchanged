@@ -1,10 +1,11 @@
-#! /usr/bin/env bash
+#! /usr/bin/env sh
+# shellcheck disable=SC1090
 
 . "$(dirname "$0")/check-git"
+
 FILENAME="$1"
-if [[ -z "$FILENAME" ]]
-then
-    git ls-files -v | grep -E '^[a-z]' | cut -f 2 -d ' '
+if [ -z "$FILENAME" ]; then
+	git ls-files -v | grep -E '^[a-z]' | cut -f 2 -d ' '
 else
-    git update-index --assume-unchanged "$FILENAME"
-fi 
+	git update-index --assume-unchanged "$FILENAME"
+fi
