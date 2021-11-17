@@ -1,0 +1,7 @@
+#! /usr/bin/env sh
+# shellcheck disable=SC1090
+
+. "$(dirname "$0")/check-git"
+
+git fetch --all --prune || exit 1
+git for-each-ref --format '%(refname:short) %(upstream:track)' | grep ' \[gone\]' | cut -f 1 -d ' ' | xargs git branch -D
