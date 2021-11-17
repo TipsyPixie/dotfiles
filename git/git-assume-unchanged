@@ -3,9 +3,15 @@
 
 . "$(dirname "$0")/check-git"
 
+get_unchanged_list() {
+	git ls-files -v | grep -E '^[a-z]' | cut -f 2 -d ' '
+}
+
 FILENAME="$1"
 if [ -z "$FILENAME" ]; then
-	git ls-files -v | grep -E '^[a-z]' | cut -f 2 -d ' '
+	get_unchanged_list
+elif get_unchanged_list | grep -q "$FILENAME"; then
+	git update-index --no-assume-unchanged "$FILENAME"
 else
 	git update-index --assume-unchanged "$FILENAME"
 fi
