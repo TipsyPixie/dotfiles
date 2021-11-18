@@ -11,7 +11,7 @@ FILENAME="$1"
 if [ -z "$FILENAME" ]; then
 	get_unchanged_list
 elif get_unchanged_list | grep -q "$FILENAME"; then
-	git update-index --no-assume-unchanged "$FILENAME"
+	git update-index --no-assume-unchanged "$FILENAME" && get_unchanged_list
 else
-	git update-index --assume-unchanged "$FILENAME"
+	git update-index --assume-unchanged "$FILENAME" && get_unchanged_list
 fi
