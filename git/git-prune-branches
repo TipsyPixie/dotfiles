@@ -4,4 +4,4 @@
 . "$(dirname "$0")/check-git"
 
 git fetch --all --prune || exit 1
-git for-each-ref --format '%(refname:short) %(upstream:track)' | grep ' \[gone\]' | cut -f 1 -d ' ' | xargs git branch -D
+git for-each-ref --format '%(refname:short) %(upstream:track)' | grep ' \[gone\]' | cut -f 1 -d ' ' | while read -r b; do git branch -D "$b"; done
