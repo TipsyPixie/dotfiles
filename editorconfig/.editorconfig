@@ -12,3 +12,6 @@ trim_trailing_whitespace = true
 
 [{*.bat, *.ps1, *.ps2, Makefile, *.go}]
 indent_style = tab
+
+[{*.yml, *.yaml, *.xml}]
+indent_size = 2
